@@ -1,3 +1,5 @@
+#####################
+####【N】【Y】【X】####
 
 import os
 import pygame
@@ -8,19 +10,21 @@ from PIL import Image
 # Inicializar pygame
 pygame.init()
 
-# Configuración de la pantalla
+# Configuración de la pantalla "aqui cambiar de acuerdo a la resolucion de su monitor"
 screen_width, screen_height = 1366, 770
+
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("NyxF3r")
 
 # Colores y fuentes
-background_color = (208, 247, 128)
-head_text_color = (0, 250, 0)
-head_background_color = (0, 0, 0)
-trail_start_color = (0, 0, 0)
-trail_end_color = (64, 64, 64)
+background_color = (208, 247, 128)  #color de fondo principal
+head_text_color = (0, 250, 0) #color de la primera letra
+head_background_color = (0, 0, 0) #color de fondo de la primera letra
+#el texto es degrado empieza de negro a gris
+trail_start_color = (0, 0, 0) #color del texto negro 
+trail_end_color = (64, 64, 64) #color de texto gris al final
 
-# Cargar la fuente
+# Cargar la fuente "ubicacion del archivo de la tipografia"
 try:
     font = pygame.font.Font("/home/nyxf3r/Documentos/Tipografia/AcPlus_ToshibaTxL1_8x16.ttf", 25)
 except FileNotFoundError:
@@ -65,8 +69,8 @@ class StaticImage:
     def get_current_frame(self):
         return self.image
 
-# Cargar imagen (puede ser PNG o GIF)
-image_file = "skull.gif"  # Cambia esto a "skullpixel1.png" si decides usar PNG
+# Cargar imagen (puede ser PNG o GIF y debe estar en la misma carpeta donde esta el archivo python)
+image_file = "skull.gif"  # Cambia esta imagen si decides usar PNG o GIF
 animation = None
 
 if image_file.endswith(".gif"):
@@ -83,8 +87,8 @@ class MatrixColumn:
     def __init__(self, x_position):
         self.x = x_position
         self.y = random.randint(0, screen_height)
-        self.speed = random.uniform(1, 80)
-        self.char = 'ô'
+        self.speed = random.uniform(1, 80)  #Velocidad algunos 1 o 80
+        self.char = 'ô'  #caracter de la primera letra pueden reemplazar por una letra o icono hacknerdfont
         self.trail_length = random.randint(10, 30)
         self.trail = [random.choice('01') for _ in range(self.trail_length)]
         self.in_front = random.choice([True, False])
@@ -167,7 +171,7 @@ while True:
             column.update_trail()
             column.draw()
 
-    # Guardar el frame como imagen
+    # Guardar el frame como imagen   "esto hace que guarde imagenes de la animacion python para poner de fondo de de pantalla"
     frame_path = os.path.join(frames_folder, f"frame_{frame_count:04d}.png")
     pygame.image.save(screen, frame_path)
     frame_count += 1
@@ -175,6 +179,4 @@ while True:
     # Actualizar pantalla
     pygame.display.flip()
     clock.tick(10)
-
-
 
