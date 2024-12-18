@@ -54,10 +54,6 @@ nyxbackground/
 - Asegúrate de tener Python 3 instalado en tu sistema.
 - Si experimentas algún problema al ejecutar el script, verifica la ruta del archivo de fuente o del GIF animado.
 
-git add images/screenshot.png
-git commit -m "Agregar screenshot del proyecto"
-git push
-
 ## 🖼️ Captura de pantalla
 
 Aquí tienes una vista previa del proyecto:
