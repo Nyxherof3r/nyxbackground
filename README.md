@@ -58,5 +58,5 @@ nyxbackground/
 
 Aquí tienes una vista previa del proyecto:
 
-![Vista previa del proyecto](images/2024-12-18_13-58.png)
+![Vista previa del proyecto](images/frame_0000.gif)
 
