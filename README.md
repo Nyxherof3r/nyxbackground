@@ -11,7 +11,7 @@ Primero, clona el repositorio en tu equipo local usando el siguiente comando:
 ```bash
 git clone https://github.com/Nyxherof3r/nyxbackground.git
 ```
-# 2. Crear la carpeta de destino
+### 2. Crear la carpeta de destino
 Copia el contenido del repositorio en la carpeta ~/scripts/nyxbackground. Puedes crear esta carpeta ejecutando:
 ```bash
 mkdir -p ~/scripts/nyxbackground
@@ -20,7 +20,7 @@ Luego, copia todo el contenido del repositorio a esa carpeta:
 ```bash
 cp -r nyxbackground/* ~/scripts/nyxbackground/
 ```
-# 3. Crear un entorno virtual
+### 3. Crear un entorno virtual
 Navega a la carpeta donde está el archivo Python y crea un entorno virtual:
 ```bash
 cd ~/scripts/nyxbackground
@@ -31,12 +31,12 @@ En Linux/Mac:
 ```bash
 source env/bin/activate
 ```
-## 4. Instalar las dependencias
+### 4. Instalar las dependencias
 Con el entorno virtual activado, instala las dependencias necesarias:
 ```bash
 pip install pygame pillow
 ```
-## 5. Ejecutar el script
+### 5. Ejecutar el script
 Finalmente, ejecuta el script desde la misma carpeta para probar la animación:
 ```bash
 python nyxbackground.py
