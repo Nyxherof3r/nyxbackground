@@ -58,5 +58,8 @@ nyxbackground/
 
 Aquí tienes una vista previa del proyecto:
 
-![Vista previa del proyecto](images/frame_0000.gif)
+![Vista previa del proyecto](images/output_1.gif)
+![Vista previa del proyecto](images/output_2.gif)
+Pueden modificar como quieran el color tipografia o imagen
+![Vista previa del proyecto](images/output_3.gif)
 
