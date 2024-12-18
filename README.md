@@ -42,14 +42,14 @@ Finalmente, ejecuta el script desde la misma carpeta para probar la animación:
 python nyxbackground.py
 ```
 
-##📂 Estructura del proyecto
+## 📂 Estructura del proyecto
 #nyxbackground/
-#├── nyxbackground.py       # Script principal
-#├── frames/                # Carpeta donde se guardan los frames generados
-#├── skull.gif              # Archivo de ejemplo para el GIF animado
-#└── requirements.txt       # Dependencias del proyecto
+├── nyxbackground.py        Script principal
+├── frames/                 Carpeta donde se guardan los frames generados
+├── skull.gif               Archivo de ejemplo para el GIF animado
+└── requirements.txt        Dependencias del proyecto
 
 
-##🛠️ Notas
+## 🛠️ Notas
     Asegúrate de tener Python 3 instalado en tu sistema.
     Si experimentas algún problema al ejecutar el script, verifica la ruta del archivo de fuente o del GIF animado.
