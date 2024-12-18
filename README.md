@@ -43,12 +43,11 @@ python nyxbackground.py
 ```
 ---
 ## 📂 Estructura del proyecto
-#nyxbackground/
--- nyxbackground.py        --Script principal
---  frames/                --Carpeta donde se guardan los frames generados
--- skull.gif               --Archivo de ejemplo para el GIF animado
--- requirements.txt        --Dependencias del proyecto
-
+nyxbackground/
+├── nyxbackground.py       # Script principal
+├── frames/                # Carpeta donde se guardan los frames generados
+├── skull.gif              # Archivo de ejemplo para el GIF animado
+└── requirements.txt       # Dependencias del proyecto
 
 ## 🛠️ Notas
 - Asegúrate de tener Python 3 instalado en tu sistema.
