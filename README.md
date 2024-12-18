@@ -8,7 +8,7 @@ Este proyecto utiliza Python y Pygame para crear una animación personalizada en
 
 ### 1. Clonar este repositorio
 Primero, clona el repositorio en tu equipo local usando el siguiente comando:
-```bash
+```
 git clone https://github.com/Nyxherof3r/nyxbackground.git
 ```
 ### 2. Crear la carpeta de destino
@@ -44,12 +44,12 @@ python nyxbackground.py
 
 ## 📂 Estructura del proyecto
 #nyxbackground/
-├── nyxbackground.py        Script principal
-├── frames/                 Carpeta donde se guardan los frames generados
-├── skull.gif               Archivo de ejemplo para el GIF animado
-└── requirements.txt        Dependencias del proyecto
+- nyxbackground.py        Script principal
+-  frames/                Carpeta donde se guardan los frames generados
+- skull.gif               Archivo de ejemplo para el GIF animado
+- requirements.txt        Dependencias del proyecto
 
 
 ## 🛠️ Notas
-    Asegúrate de tener Python 3 instalado en tu sistema.
-    Si experimentas algún problema al ejecutar el script, verifica la ruta del archivo de fuente o del GIF animado.
+- Asegúrate de tener Python 3 instalado en tu sistema.
+- Si experimentas algún problema al ejecutar el script, verifica la ruta del archivo de fuente o del GIF animado.
