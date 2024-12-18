@@ -51,5 +51,5 @@ nyxbackground/
 └── requirements.txt       # Dependencias del proyecto
 ````
 ## 🛠️ Notas
--Asegúrate de tener Python 3 instalado en tu sistema.
--Si experimentas algún problema al ejecutar el script, verifica la ruta del archivo de fuente o del GIF animado.
+-- Asegúrate de tener Python 3 instalado en tu sistema.
+-- Si experimentas algún problema al ejecutar el script, verifica la ruta del archivo de fuente o del GIF animado.
