@@ -6,7 +6,7 @@ Este proyecto utiliza Python y Pygame para crear una animación personalizada en
 
 ## ⚙️ Pasos de instalación
 
-# 1. Clonar este repositorio
+#### 1. Clonar este repositorio
 Primero, clona el repositorio en tu equipo local usando el siguiente comando:
 ```bash
 git clone https://github.com/Nyxherof3r/nyxbackground.git
