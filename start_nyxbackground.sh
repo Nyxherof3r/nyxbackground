@@ -1,4 +1,4 @@
-
 #!/bin/bash
-python3 /home/nyxf3r/scripts/nyxbackground/nyxbackground.py
+#Esto es opcional si quieren ejecutar si activar el entorno python
+python3 ~/scripts/nyxbackground/nyxbackground.py
 
