@@ -41,7 +41,8 @@ Finalmente, ejecuta el script desde la misma carpeta para probar la animación:
 ```
 python nyxbackground.py
 ```
-###A este paso ya ves la animacion de phyton en pantalla completa... intente maneras de visualizar como iniciar la animacion y sobreponer el panel y ventanas solo logre que al momento de reiniciar mi pc solo muestre la animacion en el primer escritorio y no en los 6 escritorios y la manera de que se vea la animacion fue usando feh para que se vea como fondo de pantalla en todos los escritorios, pueden convertir las imagenes como video o usar un script que hice usando feh
+A este paso ya ves la animacion de phyton en pantalla completa... hay otras maneras pero use "feh" para que se vea como fondo de pantalla en todos los escritorios
+
 ---
 ## ⚙️ Pasos para fondo de pantalla de la animacion python
 Descomentar estas lineas del archivo nyxbackground.py cuando ya estas deacuerdo con la personalizacion de python 
