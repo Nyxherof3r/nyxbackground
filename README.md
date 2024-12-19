@@ -72,7 +72,7 @@ xsetroot -cursor_name left_ptr
 ~/scripts/nyxbackground/animated_background.sh &
 ...
 ````
-### Otros entornos
+### Otros entornos de escritorio
 1. Crear la carpeta autostart-script. la carpeta donde se alojarán los scripts de inicio automático. Esto lo haces con:
 ```
 mkdir -p ~/.config/autostart-scripts
