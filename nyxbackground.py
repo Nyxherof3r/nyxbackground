@@ -1,6 +1,5 @@
-#####################
-####【N】【Y】【X】####
-
+################
+#### nyx
 import os
 import pygame
 import random
@@ -24,13 +23,17 @@ head_background_color = (0, 0, 0) #color de fondo de la primera letra
 trail_start_color = (0, 0, 0) #color del texto negro 
 trail_end_color = (64, 64, 64) #color de texto gris al final
 
-# Cargar la fuente "ubicacion del archivo de la tipografia"
-try:
-    font = pygame.font.Font("/home/nyxf3r/Documentos/Tipografia/AcPlus_ToshibaTxL1_8x16.ttf", 25)
-except FileNotFoundError:
-    print("Fuente no encontrada. Verifica la ruta y el archivo.")
-    pygame.quit()
-    sys.exit()
+# Nombre de la fuente instalada en el sistema
+font_name = "AcPlus_ToshibaTxL1_8x16"  # Nombre de la fuente sin la extensión .ttf
+font_size = 24
+
+# Cargar la fuente desde el sistema
+font = pygame.font.SysFont(font_name, font_size)
+
+# Si la fuente no está disponible, pygame.sysfont devuelve una fuente predeterminada.
+if not font:
+    print("Fuente no encontrada en el sistema. Usando fuente predeterminada.")
+    font = pygame.font.SysFont("Arial", font_size)  # Usar fuente predeterminada como respaldo
 
 # Clase para manejar GIF animados
 class AnimatedGIF:
@@ -70,7 +73,7 @@ class StaticImage:
         return self.image
 
 # Cargar imagen (puede ser PNG o GIF y debe estar en la misma carpeta donde esta el archivo python)
-image_file = "skull.gif"  # Cambia esta imagen si decides usar PNG o GIF
+image_file = "skull.gif"  # Cambia esta imagen si decides usar PNG o GIF, la imagen debe estar en el mismo archivo
 animation = None
 
 if image_file.endswith(".gif"):
@@ -123,11 +126,11 @@ class MatrixColumn:
             trail_y_position = self.y + (i + 1) * font.size(" ")[1] * 0.8
             screen.blit(trail_surface, (self.x, trail_y_position))
 
-# Crear columnas
+# Crear las columnas
 column_spacing = font.size(" ")[0] * 1
 columns = [MatrixColumn(x * column_spacing) for x in range(screen_width // int(column_spacing))]
 
-# Crear carpeta para guardar los frames
+# Crea carpeta para guardar los frames
 frames_folder = "frames"
 if not os.path.exists(frames_folder):
     os.makedirs(frames_folder)
@@ -171,12 +174,11 @@ while True:
             column.update_trail()
             column.draw()
 
-    # Guardar el frame como imagen   "esto hace que guarde imagenes de la animacion python para poner de fondo de de pantalla"
-    frame_path = os.path.join(frames_folder, f"frame_{frame_count:04d}.png")
-    pygame.image.save(screen, frame_path)
-    frame_count += 1
+    # Guardar el frame como imagen   "esto hace que guarde imagenes de la animacion python para poner de fondo de pantalla"
+    #frame_path = os.path.join(frames_folder, f"frame_{frame_count:04d}.png")
+    #pygame.image.save(screen, frame_path)
+    #frame_count += 1
 
     # Actualizar pantalla
     pygame.display.flip()
     clock.tick(10)
-
