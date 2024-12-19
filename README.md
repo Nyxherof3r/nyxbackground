@@ -38,13 +38,14 @@ pip install pygame pillow
 ```
 ### 5. Ejecutar el script
 Finalmente, ejecuta el script desde la misma carpeta para probar la animación:
+
 ```
 python nyxbackground.py
 ```
 A este paso ya ves la animacion de phyton en pantalla completa... hay otras maneras pero use "feh" para que se vea como fondo de pantalla en todos los escritorios
 
 ---
-## ⚙️ Pasos para fondo de pantalla de la animacion python
+### ⚙️ Pasos para fondo de pantalla de la animacion python
 Descomentar estas lineas del archivo nyxbackground.py cuando ya estas deacuerdo con la personalizacion de python 
 ````
     #frame_path = os.path.join(frames_folder, f"frame_{frame_count:04d}.png")
