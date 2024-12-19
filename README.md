@@ -41,14 +41,61 @@ Finalmente, ejecuta el script desde la misma carpeta para probar la animación:
 ```
 python nyxbackground.py
 ```
+A este paso ya ves la animacion de phyton en pantalla completa... intente maneras de visualizar como iniciar la animacion y sobreponer el panel y ventanas solo logre que al momento de reiniciar mi pc solo muestre la animacion en el primer escritorio y no en los 6 escritorios y la manera de que se vea la animacion fue usando feh para que se vea como fondo de pantalla en todos los escritorios, pueden convertir las imagenes como video o usar un script que hice usando feh
+---
+## ⚙️ Pasos para fondo de pantalla de la animacion python
+Descomentar estas lineas del archivo nyxbackground.py cuando ya estas deacuerdo con la personalizacion de python 
+````
+    #frame_path = os.path.join(frames_folder, f"frame_{frame_count:04d}.png")
+    #pygame.image.save(screen, frame_path)
+    #frame_count += 1
+````
+Al descomentar crea las imagenes es normal que se vea un poco lento porque crea muchas pero las crea bien y crea una carpeta llamada frame en la misma carpeta donde esta la animacion python.
+### Script para visualizar todas las imagenes de la carpeta frame
+Darle los permisos de ejecucion
+```
+chmod +x ~/scripts/nyxbackground/animated_background.sh
+```
+# Consideraciones para entorno de escritorio
+## fondo animado en BSPWM
+agregar el script al archivo bspwmrc asi
+````
+#! /bin/sh
+# Iniciar sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd &
+# Configuración de bspwm
+bspc monitor -d '1' '2' '3' '4' '5' '6'
+xsetroot -cursor_name left_ptr
+# Ejecutar el script de fondo animado
+~/scripts/nyxbackground/animated_background.sh &
+...
+````
+## Otros entornos
+1. Crear la carpeta autostart-script. la carpeta donde se alojarán los scripts de inicio automático. Esto lo haces con:
+```
+mkdir -p ~/.config/autostart-scripts
+```
+2. Copiar el script al directorio de inicio
+```
+cp ~/scripts/nyxbackground/animated_background.sh ~/.config/autostart-scripts/
+```
+3. Dar permisos de ejecución al script
+```
+chmod +x ~/.config/autostart-scripts/animated_background.sh
+```
+Esto permite que el sistema pueda ejecutarlo automáticamente al iniciar sesión.
+
+Evitar que Plasma gestion en el fondo:
+-Desactiva el fondo de escritorio en KDE. Haz esto:
+-Ve a Configuración del Sistema > Fondo de pantalla. Configura el fondo como "Sin imagen" o un fondo vacío.
 ---
 ## 📂 Estructura del proyecto
 ````
 nyxbackground/
-├── nyxbackground.py       # Script principal
-├── frames/                # Carpeta donde se guardan los frames generados
-├── skull.gif              # Archivo de ejemplo para el GIF animado
-└── requirements.txt       # Dependencias del proyecto
+├── nyxbackground.py        # Archivo principal python
+├── frames/                 # Carpeta donde se guardan los frames generados
+├── skull.gif               # Archivo de ejemplo para el GIF animado
+└── animated_background.sh  # Script para visualizar frames para fondo de pantalla
 ````
 ## 🛠️ Notas
 - Asegúrate de tener Python 3 instalado en tu sistema.
